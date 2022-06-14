@@ -1,7 +1,7 @@
 import type { PostProperties } from '$types/posts';
-import * as gm from 'gray-matter';
-import * as fs from 'node:fs';
-import * as path from 'node:path';
+import gm from 'gray-matter';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const parsePost = (path: string): PostProperties => {
 	const { data } = gm.read(path);

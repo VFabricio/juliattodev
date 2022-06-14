@@ -11,7 +11,7 @@
 <ul>
 	{#each orderedPosts as post}
 		<li>
-			<a href={relativizePath(post.slug)}>{post.title}</a>
+			<a sveltekit:prefetch href={relativizePath(post.slug)}>{post.title}</a>
 		</li>
 	{/each}
 </ul>

@@ -1,8 +1,7 @@
-import type { Post } from '$types/posts';
 import type { RequestHandler } from '@sveltejs/kit';
-import * as gm from 'gray-matter';
+import gm from 'gray-matter';
 import { marked } from 'marked';
-import * as path from 'node:path';
+import * as path from 'path';
 
 const postsLocation = 'blog-posts';
 
