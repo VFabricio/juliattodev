@@ -8,6 +8,9 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
+		alias: {
+			$types: 'src/types',
+		},
 		adapter: adapter()
 	}
 };
