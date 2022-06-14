@@ -4,4 +4,8 @@ interface PostProperties {
 	slug: string;
 }
 
-export type { PostProperties };
+interface Post extends PostProperties {
+	contents: string;
+}
+
+export type { Post, PostProperties };
