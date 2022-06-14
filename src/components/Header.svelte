@@ -1,11 +1,20 @@
-<div class="container">
+<script>
+	import { page } from '$app/stores';
+	$: route = $page.routeId;
+</script>
+
+<header class="container">
 	<div class="photo" />
 	<a href="/" class="main-link">juliatto.dev</a>
-	<a href="/blog" class="blog-link">Blog</a>
-	<a href="/about" class="about-link">About</a>
-</div>
+	<a href="/blog" class="blog-link" class:active={route === 'blog'}>Blog</a>
+	<a href="/about" class="about-link" class:active={route === 'about'}>About</a>
+</header>
 
 <style>
+	.active {
+		color: var(--color-accent);
+	}
+
 	.about-link {
 		margin-left: 1em;
 	}
